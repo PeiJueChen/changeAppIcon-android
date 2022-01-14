@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.changeappiconandroid">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ChangeAppIconAndroid">
+        <activity
+            android:name=".MainActivity2"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.ChangeAppIconAndroid.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity-alias
+            android:name=".newsTexasActivity"
+            android:label="@string/app_name"
+            android:icon="@mipmap/tx_ic_launcher"
+            android:roundIcon="@mipmap/tx_ic_launcher_round"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity=".MainActivity2"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".newsRRActivity"
+            android:label="@string/app_name"
+            android:icon="@mipmap/rr_ic_launcher"
+            android:roundIcon="@mipmap/rr_ic_launcher_round"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity=".MainActivity2" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+
+
+    </application>
+
+
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+
+</manifest>
